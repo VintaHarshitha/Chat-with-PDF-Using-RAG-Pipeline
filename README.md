@@ -1,24 +1,22 @@
 # Chat-with-PDF-Using-RAG-Pipeline
 
-This script extracts tables from a PDF file, cleans up multi-line rows, and saves the cleaned data as a CSV file. It uses the tabula library for extracting the table data and pandas for handling and cleaning the data.
-
+This project demonstrates how to extract tables from a PDF file, clean and merge multi-line rows, and use FAISS for retrieving relevant data from those tables based on a user query. The pipeline is built using the tabula, pdfplumber, sentence-transformers, and faiss libraries.
 ### Requirements
 
  - Before running this script, make sure you have the following libraries installed:
 ```sh
-1. tabula-py (Tabula's Python wrapper for PDF table extraction)
-2. pandas (for data manipulation)
-3. numpy (for handling missing data)
+1. pip install tabula-py pandas numpy sentence-transformers faiss-cpu pdfplumber
+
 ```
-### Installation
-You can install these libraries using pip:
-```sh
-pip install tabula-py pandas numpy
+
 ```
-### Features
+### Overview
+
+This script performs the following tasks:
 ```sh
-1.Extracts table data from a specified page of a PDF.
-2.Cleans and merges multi-line rows where labels span across multiple lines.
-3.Saves the cleaned data into a CSV file for further analysis.
-4.Displays the cleaned data in the console for verification.
+Extract Tables from PDF: Using the tabula library, it extracts tables from a specified page of the PDF.
+Clean and Merge Multi-Line Rows: Ensures that multi-line rows in the table are merged correctly.
+Build FAISS Index: The tables are processed into text documents, and embeddings are generated using the SentenceTransformer model to build a FAISS index.
+Retrieve Relevant Data: Using the FAISS index, the system retrieves rows relevant to a user query.
+Return as Table: The relevant rows are returned as a DataFrame, where each row corresponds to the data relevant to the user query.
 ```
