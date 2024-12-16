@@ -9,7 +9,6 @@ This project demonstrates how to extract tables from a PDF file, clean and merge
 
 ```
 
-```
 ### Overview
 
 This script performs the following tasks:
