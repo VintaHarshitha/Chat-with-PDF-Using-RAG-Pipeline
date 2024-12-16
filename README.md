@@ -10,9 +10,11 @@ pandas (for data manipulation)
 numpy (for handling missing data)
 
 You can install these libraries using pip:
+
 pip install tabula-py pandas numpy
 
 Features
+
 Extracts table data from a specified page of a PDF.
 Cleans and merges multi-line rows where labels span across multiple lines.
 Saves the cleaned data into a CSV file for further analysis.
